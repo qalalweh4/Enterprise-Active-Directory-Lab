@@ -397,41 +397,8 @@ The AI-enhanced firewall is a custom Python application that sits inline on the 
 
 ### 3.2 Architecture
 
-```
-Network traffic
-      │
-      ▼
-┌─────────────────┐
-│  Packet capture  │  ← Scapy / pcap
-│  (inline tap)    │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  Rule engine     │  ← Snort-style rules
-│  (Python)        │  ← Port scan, payload patterns, anomaly thresholds
-└────────┬────────┘
-         │ Alert fired
-         ▼
-┌─────────────────┐
-│  Alert enricher  │  ← IP reputation, historical context, geolocation
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  LLM triage      │  ← Claude API / GPT API
-│  (Claude Sonnet) │  ← Context-aware classification
-└────────┬────────┘
-         │
-    ┌────┴────────────────┐
-    │                     │
-    ▼                     ▼
-TRUE_POSITIVE         FALSE_POSITIVE
-(escalate to SIEM)    (auto-close, log)
-    │
-    ▼
-Splunk alert
-```
+<img width="1103" height="1426" alt="Ai-Firewall" src="https://github.com/user-attachments/assets/1620806e-1923-46d9-bfd2-ec0d7d345d24" />
+
 
 ### 3.3 Core Firewall Engine
 
