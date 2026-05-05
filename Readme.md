@@ -410,6 +410,11 @@ index=wineventlog EventCode=4624 Logon_Type=3
 | where src_ip != dest_ip
 ```
 
+##Dashboard
+
+<img width="1100" height="619" alt="0_xtL-E5fRFBH5Ysfn" src="https://github.com/user-attachments/assets/4af83b42-60dc-4381-946b-880f35527f85" />
+
+
 ---
 
 ## Phase 3 — AI-Enhanced Firewall
